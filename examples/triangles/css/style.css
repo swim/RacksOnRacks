@@ -1,0 +1,316 @@
+/**
+ * @file
+ * style.css
+ */
+ 
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: #eee;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5625em;
+  height: 100%;
+  margin: 0;
+}
+input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4, caption,
+h5,
+h6 {
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 0.3125em;
+  font-family: "open-sans", Helvetica, Arial, sans-serif;
+  line-height: normal;
+  letter-spacing: -1px; 
+}
+h1 {
+  font-size: 55px;
+  font-size: 3.4375rem;
+  font-weight: 700; 
+}
+h2 {
+  font-size: 34px;
+  font-size: 2.125rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 21px;
+  font-size: 1.3125rem; 
+}
+h4, caption {
+  font-size: 18px;
+  font-size: 1.125rem; 
+}
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 700; 
+}
+
+p,
+blockquote {
+  color: #EA6640;
+  margin: 0;
+  margin-top: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-bottom: 1.5625em; 
+}
+a {
+  color: #fff;
+}
+p + img {
+  float: left;
+  margin-right: 1em; 
+}
+blockquote {
+  margin-top: 0em;
+  padding-top: 1.5625em;
+  padding-bottom: 1.5625em;
+  margin-bottom: 1.5625em;
+  padding: 0 1.5em;
+  border-style: solid;
+  border-width: 0.0625em;
+  padding: 1.5em;
+  border-left-style: solid;
+  border-left-width: 0.625em;
+  padding-left: 0.9375em;
+  font-style: italic;
+  color: #064771; 
+}
+
+
+/* form */
+form {
+  position: relative;
+}
+form input {
+  font-size: 17px;
+  text-indent: 3px;
+  border-color: transparent;
+}
+form input[type=text],
+form input[type=password] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  box-shadow: none;
+}
+form input[type=submit] {
+  padding: 10px 12px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+form .form-item {
+  padding: 5px;
+  margin-bottom: 7px;
+}
+ 
+/* Common */
+a.red {
+  color: #503A3C;
+}
+a.green {
+  color: #929B66;
+}
+.hidden {
+  display: none !important;
+}
+
+#onracks {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+.page .stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* the iangles */
+.triangle {
+  position: absolute;
+  width: 32px;
+  height: 64px;
+  margin: 0;
+}
+.triangle .item {
+  height: 0px;
+  width: 0px;
+  border-color: transparent transparent #FEC56C transparent;
+  border-style: solid;
+  border-width: 0px 16px 16px 16px;
+  /*-webkit-transition: border-color 0.3s ease-out;
+  -moz-transition: border-color 0.3s ease-out;
+  -o-transition: border-color 0.3s ease-out;
+  transition: border-color 0.3s ease-out;*/
+}
+.triangle .item.up {
+  border-color: transparent transparent #EA6640 transparent;
+}
+.triangle .item.down {
+  transform: rotate(180deg);
+}
+.triangle.up .item.up {
+  transform: rotate(180deg);
+  border-color: transparent transparent #FEB841 transparent;
+}
+.triangle.up .item.up.in {
+  border-color: transparent transparent #FEB841 transparent;
+}
+.triangle.up .item.down {
+  transform: rotate(0deg);
+  border-color: transparent transparent #F0A432 transparent;
+}
+.triangle.down .item.up.in {
+  border-color: transparent transparent #FEC56C transparent;
+}
+
+/* message */
+.message {
+  color: #EA6640;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+  z-index: 2;
+}
+.message .container {
+  width: 80%;
+  position: relative;
+  top: 35%;
+  margin: 0 auto;
+}
+
+/* Footer */
+.navbar {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  z-index: 5;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  color: #fff;
+  display: block;
+  padding: 20px 25px;
+}
+.navbar ul li:nth-child(1) a {
+  background-color: #EA6640;
+}
+.navbar ul li:nth-child(1) a:hover {
+  background-color: #FF8A68;
+}
+.navbar ul li:nth-child(2) a {
+  background-color: #F0A432;
+}
+.navbar ul li:nth-child(2) a:hover {
+  background-color: #FFBD5A;
+}
+.navbar ul li:nth-child(3) a {
+  background-color: #FEC56C;
+}
+.navbar ul li:nth-child(3) a:hover {
+  background-color: #FFD491;
+}
+
+/* Modal */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 100%;
+  z-index: 99; 
+}
+.modal-overlay .modal-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  top: 75px; 
+}
+.modal-overlay .modal-container .modal {
+  width: 95%;
+  margin: 0 auto; 
+}
+.modal-overlay .modal-container .modal .title {
+  color: #fff; 
+}
+.modal-overlay .modal-container .modal .form-item {
+  color: #fff; 
+}
+.modal-overlay .modal-container .controls {
+  position: absolute;
+  left: 35px;
+  top: -45px; 
+}
+.modal-overlay .modal-container .controls ul {
+  margin: 0;
+  padding: 0; 
+}
+.modal-overlay .modal-container .controls ul li {
+  list-style: none; 
+}
+.modal-overlay .modal-container .controls ul li a {
+  color: #fff;
+  text-decoration: none; 
+}
+.modal-overlay .modal-container .controls ul li a i {
+  font-size: 1.2em; 
+}
+
+/* Modal (768px) */
+@media (min-width: 768px) {
+  .modal-overlay .modal-container {
+    width: 80%; 
+  }
+  .modal-overlay .modal-container .controls {
+    left: -45px;
+    top: -35px; 
+  }
+}
+
+/* Modal (1200px) */
+@media (min-width: 1200px) {
+  .modal-overlay .modal-container {
+    width: 50%; 
+  }
+}
